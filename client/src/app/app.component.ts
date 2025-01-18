@@ -9,7 +9,7 @@ import { RouterOutlet } from '@angular/router';
 import { NavComponent } from './nav/nav.component';
 import { AccountsService } from './_services/accounts.service';
 import { HomeComponent } from "./home/home.component";
-import { NgxSpinner, NgxSpinnerComponent } from 'ngx-spinner';
+import { NgxSpinnerComponent } from 'ngx-spinner';
 
 @Component({
   selector: 'app-root',
@@ -30,7 +30,7 @@ export class AppComponent implements OnInit {
     const userString = localStorage.getItem('user');
     if(!userString) return;
     const user = JSON.parse(userString);
-    this.accountService.currentUser.set(user);
+    this.accountService.setCurrentUser(user);
   }
 
   
