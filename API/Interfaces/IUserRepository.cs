@@ -10,8 +10,8 @@ public interface IUserRepository
     void Update(AppUser user);
     Task<bool> SaveAllAsync();
     Task<IEnumerable<AppUser>> GetUsersAsync();
-    Task<AppUser?> GetUsersByIdAsync(int id);
-    Task<AppUser?> GetUsersByUsernameAsync(string username);
+    Task<AppUser?> GetUserByIdAsync(int id);
+    Task<AppUser?> GetUserByUsernameAsync(string username);
     Task<PagedList<MemberDto>> GetMembersAsync(UsersParams userParams);
     Task<MemberDto?> GetMemberAsync(string username);
 }
