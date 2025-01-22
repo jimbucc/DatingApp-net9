@@ -10,7 +10,7 @@
                             <span class="chat-img float-end">
                                 <img class="rounded-circle"
                                     src="{{message.senderPhotoUrl || './assets/user.png'}}" 
-                                    alt="IMage of sender">
+                                    alt="Image of sender">
                             </span>
                             <div class="chat-body">
                                 <div class="header">
@@ -35,6 +35,7 @@
             </ul>
         }
     </div>
+    
     <div class="card-footer">
         <form #messageForm="ngForm" (ngSubmit)="sendMessage()">
             <div class="input-group">

@@ -71,6 +71,7 @@ public class MessagesController(IMessageRepository messageRepository, IUserRepos
 
         if(message.SendUserName == username) message.SenderDeleted = true;
         if(message.RecipientUserName == username) message.RecipientDeleted = true;
+        
         if(message is {SenderDeleted: true, RecipientDeleted: true})
         {
             messageRepository.DeleteMessage(message);
