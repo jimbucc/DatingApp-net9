@@ -3,13 +3,14 @@ import { FormsModule } from '@angular/forms';
 import { AccountsService } from '../_services/accounts.service';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { Router, RouterLink, RouterLinkActive } from '@angular/router';
+import { HasRoleDirective } from '../_directives/has-role.directive';
 //import { ToastrService } from 'ngx-toaster';
 
 
 @Component({
   selector: 'app-nav',
   standalone: true,
-  imports: [FormsModule, BsDropdownModule, RouterLink, RouterLinkActive],
+  imports: [FormsModule, BsDropdownModule, RouterLink, RouterLinkActive, HasRoleDirective],
   templateUrl: './nav.component.html',
   styleUrl: './nav.component.css'
 })
